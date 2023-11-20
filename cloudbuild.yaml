@@ -7,22 +7,8 @@ steps:
   - '--zone'
   - 'us-central1-a'
   - '--command'
-  - |
-    while fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1 ; do
-        sleep 1
-    done
-
-    # Update and install Go
-    sudo apt-get update
-    sudo apt-get install -y golang
-
-    # Add Go to the PATH and execute the build script
-    export PATH=$PATH:/usr/lib/go/bin
-    cd /home/jeetendra/todousingcloudsql
-
-    # Modify the script to include the path to the Go binaries
-    /usr/lib/go/bin/go build main.go
-    ./main
+  - 'bash -s' # Run bash with the script as input
+  - < ./build_script.sh # Pass the script content as input
 
 options:
   logging: 'CLOUD_LOGGING_ONLY'
