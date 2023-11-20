@@ -11,9 +11,6 @@ steps:
     cd /home/jeetendra/todousingcloudsql
     go mod tidy
     go version
-    go build -o main main.go
+    go build -o /home/jeetendra/todousingcloudsql/main main.go  # Specify the full path for the output binary
     ls -l
-    ./main
-
-options:
-  logging: 'CLOUD_LOGGING_ONLY'
+    /home/jeetendra/todousingcloudsql/main  # Use the full path when executing the binary
