@@ -11,10 +11,10 @@ steps:
     cd /home/jeetendra/todousingcloudsql
     go mod tidy
     go version
-    go build -o /home/jeetendra/todousingcloudsql/main main.go
+    go build -o /home/jeetendra/todousingcloudsql/main.go
     ls -l
     /home/jeetendra/todousingcloudsql/main
 
 options:
   logging: 'CLOUD_LOGGING_ONLY'
-  logsBucket: 'homebucket4532'  # Replace with your Cloud Storage bucket name
+  logStreamingOption: 'STREAM_ON'  # Use 'STREAM_OFF' if you don't want streaming logs
