@@ -11,10 +11,7 @@ steps:
     cd /home/jeetendra/todousingcloudsql
     go mod tidy
     go version
-    go build -o /home/jeetendra/todousingcloudsql/main.go
+    go build -o /home/jeetendra/todousingcloudsql/main main.go
     ls -l
+    chmod +x /home/jeetendra/todousingcloudsql/main  # Ensure the binary is executable
     /home/jeetendra/todousingcloudsql/main
-
-options:
-  logging: 'CLOUD_LOGGING_ONLY'
-  logStreamingOption: 'STREAM_ON'  # Use 'STREAM_OFF' if you don't want streaming logs
