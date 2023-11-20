@@ -8,8 +8,16 @@ steps:
   - 'us-central1-a'
   - '--command'
   - |
+    while fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1 ; do
+        sleep 1
+    done
+
+    # Update and install Go
     sudo apt-get update
     sudo apt-get install -y golang
+
+    # Add Go to the PATH
+    export PATH=$PATH:/usr/lib/go/bin
 
     cd /home/jeetendra/todousingcloudsql
     go build main.go
