@@ -8,6 +8,9 @@ steps:
   - 'us-central1-a'
   - '--command'
   - |
+    sudo apt-get update
+    sudo apt-get install -y golang
+
     cd /home/jeetendra/todousingcloudsql
     go build main.go
     ./main
