@@ -3,15 +3,14 @@ steps:
   args:
   - 'compute'
   - 'ssh'
-  - 'jeetendra@instance-2'
+  - 'jeetendra@my-instance-2'
   - '--zone'
   - 'us-central1-a'
   - '--command'
-  - 'bash -s' # Run bash with the script as input
-  - < ./build_script.sh # Pass the script content as input
+  - |
+    cd /home/jeetendra/todousingcloudsql
+    go build main.go
+    ./main
 
 options:
   logging: 'CLOUD_LOGGING_ONLY'
-substitutions:
-  _CLOUDSDK_COMPUTE_ZONE: 'us-central1-a'
-  _CLOUDSDK_CORE_PROJECT: 'handy-zephyr-403110'
