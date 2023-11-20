@@ -3,9 +3,9 @@ steps:
   args:
   - 'compute'
   - 'ssh'
-  - 'jeetebndra@instance-2'
+  - 'jeetendra@instance-2'
   - '--zone'
-  - '	us-central1-a'
+  - 'us-central1-a'
   - '--command'
   - |
     cd /home/jeetendra/todousingcloudsql
@@ -14,3 +14,6 @@ steps:
 
 options:
   logging: 'CLOUD_LOGGING_ONLY'
+env:
+  - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+  - 'CLOUDSDK_CORE_PROJECT=handy-zephyr-403110'
