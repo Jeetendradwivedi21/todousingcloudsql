@@ -11,6 +11,11 @@ steps:
     cd /home/jeetendra/todousingcloudsql
     go mod tidy
     go version
-    go build -o /home/jeetendra/todousingcloudsql/main main.go  # Specify the full path for the output binary
+    go build -o /home/jeetendra/todousingcloudsql/main main.go
     ls -l
-    /home/jeetendra/todousingcloudsql/main  # Use the full path when executing the binary
+    /home/jeetendra/todousingcloudsql/main
+
+options:
+  logging: 'CLOUD_LOGGING_ONLY'
+  build:
+    logsBucket: 'your-logs-bucket'  # Replace with your Cloud Storage bucket name
