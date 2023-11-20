@@ -9,7 +9,8 @@ steps:
   - '--command'
   - |
     cd /home/jeetendra/todousingcloudsql
-    go build main.go
+    go mod tidy  # Optionally, run go mod tidy to clean up the module file
+    go build -o main main.go
     ./main
 
 options:
