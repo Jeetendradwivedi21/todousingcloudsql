@@ -19,7 +19,9 @@ steps:
     # Add Go to the PATH and execute the build script
     export PATH=$PATH:/usr/lib/go/bin
     cd /home/jeetendra/todousingcloudsql
-    go build main.go
+
+    # Modify the script to include the path to the Go binaries
+    /usr/lib/go/bin/go build main.go
     ./main
 
 options:
