@@ -1,0 +1,22 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+    - 'compute'
+    - 'ssh'
+    - 'root@instance-2'
+    - '--zone'
+    - 'us-central1-a'
+    - '--command'
+    - |
+      ls /home/jeetendra/todoappbysql/
+      cd /home/jeetendra/todoappbysql/
+      go mod init github.com/jeetendradwivedi21/main
+      go mod tidy
+      go build main.go
+      ./main
+  dir: '/home/santhosh/todousingcloudsql'  # Specify the path to your source code directory
+
+options:
+  logging: 'CLOUD_LOGGING_ONLY'
+
+serviceAccount: 'handy-zephyr-403110@appspot.gserviceaccount.com
