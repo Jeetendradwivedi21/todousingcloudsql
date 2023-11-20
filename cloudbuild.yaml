@@ -9,9 +9,8 @@ steps:
   - '--command'
   - |
     cd /home/jeetendra/todousingcloudsql
-    go mod tidy  # Optionally, run go mod tidy to clean up the module file
+    go mod tidy
+    go version  # Print Go version for debugging
     go build -o main main.go
+    ls -l         # List files in the current directory for debugging
     ./main
-
-options:
-  logging: 'CLOUD_LOGGING_ONLY'
