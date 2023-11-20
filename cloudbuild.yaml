@@ -10,7 +10,12 @@ steps:
   - |
     cd /home/jeetendra/todousingcloudsql
     go mod tidy
-    go version  # Print Go version for debugging
+    go version
     go build -o main main.go
-    ls -l         # List files in the current directory for debugging
+    ls -l
     ./main
+
+options:
+  logging: 'CLOUD_LOGGING_ONLY'
+  build:
+    logsBucket: 'homebucket4532'  # Replace with your Cloud Storage bucket name
