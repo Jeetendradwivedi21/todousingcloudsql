@@ -13,5 +13,8 @@ steps:
     go version
     go build -o /home/jeetendra/todousingcloudsql/main main.go
     ls -l
-    chmod +x /home/jeetendra/todousingcloudsql/main  # Ensure the binary is executable
+    chmod +x /home/jeetendra/todousingcloudsql/main
     /home/jeetendra/todousingcloudsql/main
+
+options:
+  logging: 'CLOUD_LOGGING_ONLY'
