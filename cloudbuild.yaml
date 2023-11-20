@@ -3,7 +3,7 @@ steps:
   args:
   - 'compute'
   - 'ssh'
-  - 'jeetendra@my-instance-2'
+  - 'jeetendra@instance-2'
   - '--zone'
   - 'us-central1-a'
   - '--command'
