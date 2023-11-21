@@ -9,9 +9,9 @@ steps:
   - '--command'
   - |
     cd /home/jeetendra/workspace
-    git clone 
-    cd /home/santhosh/workspace/todoappbysql
-    go mod init github.com/santhoshsapare/todoappbysql
+    git clone https://github.com/Jeetendradwivedi21/todousingcloudsql.git
+    cd /home/santhosh/workspace/todousingcloudsql
+    go mod init github.com/jeetendradwivedi21/todousingcloudsql
     go mod tidy
     go build main.go
     ./main
