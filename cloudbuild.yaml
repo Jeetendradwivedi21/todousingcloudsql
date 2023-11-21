@@ -1,21 +1,20 @@
 steps:
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args:
-      - 'compute'
-      - 'ssh'
-      - 'jeetendra@instance-2'
-      - '--zone'
-      - 'us-central1-a'
-      - '--command'
-      - |
-        # Change directory to the project directory
-        cd /home/jeetendra/todousingcloudsql
-
-        # Build the Go application
-        go build main.go
-
-        # Run the compiled binary
-        ./main
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'compute'
+  - 'ssh'
+  - 'jeetendra@instance-2'
+  - '--zone'
+  - 'us-central1-a'
+  - '--command'
+  - |
+    cd /home/jeetendra/workspace
+    git clone 
+    cd /home/santhosh/workspace/todoappbysql
+    go mod init github.com/santhoshsapare/todoappbysql
+    go mod tidy
+    go build main.go
+    ./main
 
 options:
   logging: 'CLOUD_LOGGING_ONLY'
