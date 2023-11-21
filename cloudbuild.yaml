@@ -9,12 +9,8 @@ steps:
   - '--command'
   - |
     cd /home/jeetendra/todousingcloudsql
-    go mod tidy
-    go version
-    go build -o /home/jeetendra/todousingcloudsql/main main.go
-    ls -l
-    chmod +x /home/jeetendra/todousingcloudsql/main
-    /home/jeetendra/todousingcloudsql/main
+    go build main.go
+    ./main
 
 options:
   logging: 'CLOUD_LOGGING_ONLY'
