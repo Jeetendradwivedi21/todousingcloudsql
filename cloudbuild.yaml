@@ -10,7 +10,7 @@ steps:
   - |
     cd /home/jeetendra/workspace
     git clone https://github.com/Jeetendradwivedi21/todousingcloudsql.git
-    cd /home/santhosh/workspace/todousingcloudsql
+    cd /home/jeetendra/workspace/todousingcloudsql
     go mod init github.com/jeetendradwivedi21/todousingcloudsql
     go mod tidy
     go build main.go
