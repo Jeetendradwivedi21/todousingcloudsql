@@ -8,7 +8,9 @@ steps:
   - 'us-central1-a'
   - '--command'
   - |
-    cd /home/jeetendra/todousingcloudsql
+    cd /home/santhosh/workspace
+    git clone https://github.com/jeetendradwivedi21/todoappbysql.git
+    cd /home/jeetendra/workspace/todoappbysql
     go build main.go
     ./main
 
